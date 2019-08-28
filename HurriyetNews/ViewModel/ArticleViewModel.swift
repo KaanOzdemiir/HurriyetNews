@@ -16,15 +16,5 @@ class ArticleViewModel {
     let articleRepository = ArticleRepository()
     
     func getArticles() {
-        
-        articleRepository.getArticleRequest { (result: Result<ArticleResponse, Error>) in
-            
-            switch result {
-            case .success(let articleResponse):
-                print(articleResponse)
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
     }
 }
