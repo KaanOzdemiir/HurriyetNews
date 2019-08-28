@@ -12,6 +12,8 @@
 		F7084157231711890052279E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7084155231711890052279E /* Main.storyboard */; };
 		F70841592317118A0052279E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F70841582317118A0052279E /* Assets.xcassets */; };
 		F708415C2317118A0052279E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F708415A2317118A0052279E /* LaunchScreen.storyboard */; };
+		F708416A231711F70052279E /* AlamofireService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7084169231711F70052279E /* AlamofireService.swift */; };
+		F708416C2317123D0052279E /* URLPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F708416B2317123D0052279E /* URLPath.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		F70841582317118A0052279E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F708415B2317118A0052279E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F708415D2317118A0052279E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7084169231711F70052279E /* AlamofireService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireService.swift; sourceTree = "<group>"; };
+		F708416B2317123D0052279E /* URLPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLPath.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,64 @@
 		F7084150231711890052279E /* HurriyetNews */ = {
 			isa = PBXGroup;
 			children = (
-				F7084151231711890052279E /* AppDelegate.swift */,
-				F7084153231711890052279E /* ViewController.swift */,
+				F7084168231711E50052279E /* Helper */,
+				F7084166231711BE0052279E /* ViewModel */,
+				F7084165231711BA0052279E /* View */,
+				F7084163231711950052279E /* Model */,
+				F7084164231711AE0052279E /* Supporting Files */,
 				F7084155231711890052279E /* Main.storyboard */,
-				F70841582317118A0052279E /* Assets.xcassets */,
-				F708415A2317118A0052279E /* LaunchScreen.storyboard */,
 				F708415D2317118A0052279E /* Info.plist */,
 			);
 			path = HurriyetNews;
+			sourceTree = "<group>";
+		};
+		F7084163231711950052279E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F7084164231711AE0052279E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F7084151231711890052279E /* AppDelegate.swift */,
+				F70841582317118A0052279E /* Assets.xcassets */,
+				F708415A2317118A0052279E /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F7084165231711BA0052279E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F7084167231711CF0052279E /* Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F7084166231711BE0052279E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F7084167231711CF0052279E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F7084153231711890052279E /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F7084168231711E50052279E /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F7084169231711F70052279E /* AlamofireService.swift */,
+				F708416B2317123D0052279E /* URLPath.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +189,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F708416C2317123D0052279E /* URLPath.swift in Sources */,
 				F7084154231711890052279E /* ViewController.swift in Sources */,
+				F708416A231711F70052279E /* AlamofireService.swift in Sources */,
 				F7084152231711890052279E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
