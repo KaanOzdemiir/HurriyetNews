@@ -1,5 +1,5 @@
 //
-//  URLPath.swift
+//  ArticleRepository.swift
 //  HurriyetNews
 //
 //  Created by Kaan Ozdemir on 28.08.2019.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-class URLPath {
-    static let articleGet = "/v1/articles"
+class ArticleRepository {
+    
 }

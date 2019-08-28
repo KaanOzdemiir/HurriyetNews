@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49DAB74A29409D744A0094D3 /* Pods_HurriyetNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 900EDC04FC2C2C5BD043371B /* Pods_HurriyetNews.framework */; };
 		F7084152231711890052279E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7084151231711890052279E /* AppDelegate.swift */; };
 		F7084154231711890052279E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7084153231711890052279E /* ViewController.swift */; };
 		F7084157231711890052279E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7084155231711890052279E /* Main.storyboard */; };
@@ -14,9 +15,15 @@
 		F708415C2317118A0052279E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F708415A2317118A0052279E /* LaunchScreen.storyboard */; };
 		F708416A231711F70052279E /* AlamofireService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7084169231711F70052279E /* AlamofireService.swift */; };
 		F708416C2317123D0052279E /* URLPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F708416B2317123D0052279E /* URLPath.swift */; };
+		F708416E231714FE0052279E /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F708416D231714FE0052279E /* ArticleViewModel.swift */; };
+		F70841702317158F0052279E /* ArticleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F708416F2317158F0052279E /* ArticleResponse.swift */; };
+		F70841732317180B0052279E /* ArticleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70841722317180B0052279E /* ArticleRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		240EEA5A41171FF0DFE7B4AE /* Pods-HurriyetNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HurriyetNews.release.xcconfig"; path = "Target Support Files/Pods-HurriyetNews/Pods-HurriyetNews.release.xcconfig"; sourceTree = "<group>"; };
+		900EDC04FC2C2C5BD043371B /* Pods_HurriyetNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HurriyetNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBF040C3DAF5239B3687D6AB /* Pods-HurriyetNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HurriyetNews.debug.xcconfig"; path = "Target Support Files/Pods-HurriyetNews/Pods-HurriyetNews.debug.xcconfig"; sourceTree = "<group>"; };
 		F708414E231711890052279E /* HurriyetNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HurriyetNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7084151231711890052279E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7084153231711890052279E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +33,9 @@
 		F708415D2317118A0052279E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7084169231711F70052279E /* AlamofireService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireService.swift; sourceTree = "<group>"; };
 		F708416B2317123D0052279E /* URLPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLPath.swift; sourceTree = "<group>"; };
+		F708416D231714FE0052279E /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
+		F708416F2317158F0052279E /* ArticleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleResponse.swift; sourceTree = "<group>"; };
+		F70841722317180B0052279E /* ArticleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49DAB74A29409D744A0094D3 /* Pods_HurriyetNews.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F6C6131118B552A19B98ACB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EBF040C3DAF5239B3687D6AB /* Pods-HurriyetNews.debug.xcconfig */,
+				240EEA5A41171FF0DFE7B4AE /* Pods-HurriyetNews.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DFBFC7EB4C07DB3B32748858 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				900EDC04FC2C2C5BD043371B /* Pods_HurriyetNews.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F7084145231711890052279E = {
 			isa = PBXGroup;
 			children = (
 				F7084150231711890052279E /* HurriyetNews */,
 				F708414F231711890052279E /* Products */,
+				0F6C6131118B552A19B98ACB /* Pods */,
+				DFBFC7EB4C07DB3B32748858 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +88,7 @@
 		F7084150231711890052279E /* HurriyetNews */ = {
 			isa = PBXGroup;
 			children = (
+				F7084171231717FD0052279E /* Repository */,
 				F7084168231711E50052279E /* Helper */,
 				F7084166231711BE0052279E /* ViewModel */,
 				F7084165231711BA0052279E /* View */,
@@ -72,6 +103,7 @@
 		F7084163231711950052279E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F708416F2317158F0052279E /* ArticleResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -97,6 +129,7 @@
 		F7084166231711BE0052279E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				F708416D231714FE0052279E /* ArticleViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -118,6 +151,14 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		F7084171231717FD0052279E /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				F70841722317180B0052279E /* ArticleRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -125,9 +166,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F70841602317118A0052279E /* Build configuration list for PBXNativeTarget "HurriyetNews" */;
 			buildPhases = (
+				9196680323482F53D1F7CB4C /* [CP] Check Pods Manifest.lock */,
 				F708414A231711890052279E /* Sources */,
 				F708414B231711890052279E /* Frameworks */,
 				F708414C231711890052279E /* Resources */,
+				DF23940659D57FE7567C784B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -184,15 +227,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9196680323482F53D1F7CB4C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HurriyetNews-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF23940659D57FE7567C784B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HurriyetNews/Pods-HurriyetNews-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HurriyetNews/Pods-HurriyetNews-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HurriyetNews/Pods-HurriyetNews-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F708414A231711890052279E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F708416C2317123D0052279E /* URLPath.swift in Sources */,
+				F70841732317180B0052279E /* ArticleRepository.swift in Sources */,
 				F7084154231711890052279E /* ViewController.swift in Sources */,
 				F708416A231711F70052279E /* AlamofireService.swift in Sources */,
+				F708416E231714FE0052279E /* ArticleViewModel.swift in Sources */,
 				F7084152231711890052279E /* AppDelegate.swift in Sources */,
+				F70841702317158F0052279E /* ArticleResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +424,7 @@
 		};
 		F70841612317118A0052279E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBF040C3DAF5239B3687D6AB /* Pods-HurriyetNews.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -354,6 +443,7 @@
 		};
 		F70841622317118A0052279E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 240EEA5A41171FF0DFE7B4AE /* Pods-HurriyetNews.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
