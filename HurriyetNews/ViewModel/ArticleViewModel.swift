@@ -8,13 +8,28 @@
 
 import Foundation
 import RxSwift
+import RxCocoa
 
 class ArticleViewModel {
     
-    let articleResponse = PublishSubject<ArticleResponse>()
+    let disposeBag = DisposeBag()
+    
+    let articleResponse = PublishSubject<[ArticleResponse]>()
+    
+    let articles = BehaviorRelay<[ArticleResponse]>(value: [])
+    
     
     let articleRepository = ArticleRepository()
     
-    func getArticles() {
+    func fetchArticles(params: [String: AnyObject]) {
+        
+        articleRepository.getArticles(params: params).subscribe(onNext: { (articleResponse) in
+            self.articleResponse.onNext(articleResponse)
+            
+            self.articles.accept(articleResponse)
+        }, onError: { (error) in
+            self.articleResponse.onError(error)
+        })
+        .disposed(by: disposeBag)
     }
 }

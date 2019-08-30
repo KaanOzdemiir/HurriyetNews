@@ -7,7 +7,25 @@
 //
 
 import Foundation
+import RxSwift
 
 class ArticleRepository {
     
+    func getArticles(params: [String: AnyObject]) -> Observable<[ArticleResponse]> {
+        
+        return Observable.create({ observer -> Disposable in
+            
+            AlamofireService.getArticles(params: params, completion: { (response) in
+                
+                if let error = response.error {
+                    observer.onError(error)
+                    return
+                }
+                
+                observer.onNext(response.result.value!)
+                observer.onCompleted()
+            })
+            return Disposables.create()
+        })
+    }
 }

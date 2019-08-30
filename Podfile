@@ -14,5 +14,7 @@ pod 'Alamofire'
 
   	pod 'RxSwift'
   	pod 'RxCocoa'
+	pod 'Shimmer'
+  	pod 'Kingfisher', '~> 5.0'
 
 end
