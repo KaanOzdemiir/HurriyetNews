@@ -14,11 +14,14 @@ class ArticleResponse: Mappable {
     var id: String?
     var contentType: String?
     var createdDate, description: String?
+    var editor: String?
     var files: [FileData]?
     var modifiedDate, path, startDate: String?
+    var relatedNews: [String]?
     var tags: [String]?
-    var title: String?
+    var text, title: String?
     var url: String?
+    var writers: [String]?
     
     required init?(map: Map) {
     }
@@ -37,9 +40,14 @@ class ArticleResponse: Mappable {
         tags <- map["Tags"]
         title <- map["Title"]
         url <- map["Url"]
+        editor <- map["Editor"]
+        
+        relatedNews <- map["RelatedNews"]
+        text <- map["Text"]
+        writers <- map["Writers"]
     }
     
-    init(id: String? = nil, contentType: String? = nil, createdDate: String? = nil, articleResponseDescription: String? = nil, files: [FileData]? = nil, modifiedDate: String? = nil, path: String? = nil, startDate: String? = nil, tags: [String]? = nil, title: String? = nil, url: String? = nil) {
+    init(id: String? = nil, contentType: String? = nil, createdDate: String? = nil, articleResponseDescription: String? = nil, files: [FileData]? = nil, modifiedDate: String? = nil, path: String? = nil, startDate: String? = nil, tags: [String]? = nil, title: String? = nil, url: String? = nil, editor: String? = nil, relatedNews: [String]? = nil, text: String? = nil, writers: [String]? = nil) {
         self.id = id
         self.contentType = contentType
         self.createdDate = createdDate
@@ -51,6 +59,10 @@ class ArticleResponse: Mappable {
         self.tags = tags
         self.title = title
         self.url = url
+        self.editor = editor
+        self.relatedNews = relatedNews
+        self.text = text
+        self.writers = writers
     }
 }
 // MARK: - File

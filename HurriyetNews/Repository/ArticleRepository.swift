@@ -28,4 +28,22 @@ class ArticleRepository {
             return Disposables.create()
         })
     }
+    
+    func getArticleBy(id: String) -> Observable<ArticleResponse> {
+        
+        return Observable.create({ observer -> Disposable in
+            
+            AlamofireService.getArticleBy(id: id, completion: { (response) in
+                
+                if let error = response.error {
+                    observer.onError(error)
+                    return
+                }
+                
+                observer.onNext(response.result.value!)
+                observer.onCompleted()
+            })
+            return Disposables.create()
+        })
+    }
 }

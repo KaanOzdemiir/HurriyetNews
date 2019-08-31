@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jdJ-ZI-RIR">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,25 +10,30 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Article List View Controller-->
+        <!--Günün Haberleri-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ArticleListViewController" customModule="HurriyetNews" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="292" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="W5D-G4-udd">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="292" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="W5D-G4-udd">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="722"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="HPO-5e-krK">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SegueArticleDetailVC" id="HPO-5e-krK">
                                         <rect key="frame" x="0.0" y="28" width="414" height="292"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HPO-5e-krK" id="ncu-ob-T1n">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="292"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <segue destination="QHa-tX-jof" kind="show" identifier="SegueArticleDetailVC" id="G42-jP-O0g"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -42,12 +47,154 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Günün Haberleri" largeTitleDisplayMode="always" id="X0c-ZD-HMG">
+                        <barButtonItem key="backBarButtonItem" title="Geri" id="MSf-TH-zZr"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="W5D-G4-udd" id="x3X-MR-Rip"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="118.52678571428571"/>
+        </scene>
+        <!--Detay-->
+        <scene sceneID="twX-h4-1e2">
+            <objects>
+                <viewController title="Detay" automaticallyAdjustsScrollViewInsets="NO" id="QHa-tX-jof" customClass="ArticleDetailViewController" customModule="HurriyetNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ra0-KG-n2V">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="860"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="deB-Sy-k39">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="826"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1H-h1-BaA">
+                                        <rect key="frame" x="8" y="256" width="398" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KwZ-0U-6Ge">
+                                        <rect key="frame" x="8" y="283.5" width="398" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="279-Cd-yu8">
+                                        <rect key="frame" x="8" y="8" width="398" height="240"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="240" id="2uY-20-vIw"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="b1H-h1-BaA" firstAttribute="top" secondItem="279-Cd-yu8" secondAttribute="bottom" constant="8" id="C1a-LK-Fjd"/>
+                                    <constraint firstItem="279-Cd-yu8" firstAttribute="leading" secondItem="deB-Sy-k39" secondAttribute="leading" constant="8" id="ERO-DS-vu9"/>
+                                    <constraint firstItem="279-Cd-yu8" firstAttribute="top" secondItem="deB-Sy-k39" secondAttribute="top" constant="8" id="KAw-sZ-8wB"/>
+                                    <constraint firstItem="KwZ-0U-6Ge" firstAttribute="top" secondItem="b1H-h1-BaA" secondAttribute="bottom" constant="8" id="Pgn-Cp-Okf"/>
+                                    <constraint firstAttribute="trailing" secondItem="279-Cd-yu8" secondAttribute="trailing" constant="8" id="cen-hP-eg0"/>
+                                    <constraint firstItem="KwZ-0U-6Ge" firstAttribute="leading" secondItem="deB-Sy-k39" secondAttribute="leading" constant="8" id="jfK-qH-v4A"/>
+                                    <constraint firstAttribute="trailing" secondItem="KwZ-0U-6Ge" secondAttribute="trailing" constant="8" id="mh6-Xs-mRl"/>
+                                    <constraint firstAttribute="bottom" secondItem="KwZ-0U-6Ge" secondAttribute="bottom" constant="8" id="vgK-TK-fPX"/>
+                                    <constraint firstItem="KwZ-0U-6Ge" firstAttribute="width" secondItem="deB-Sy-k39" secondAttribute="width" constant="-16" id="xqu-hY-fEA"/>
+                                    <constraint firstItem="b1H-h1-BaA" firstAttribute="leading" secondItem="deB-Sy-k39" secondAttribute="leading" constant="8" id="yGW-es-AST"/>
+                                    <constraint firstAttribute="trailing" secondItem="b1H-h1-BaA" secondAttribute="trailing" constant="8" id="yjI-4d-JUC"/>
+                                    <constraint firstItem="b1H-h1-BaA" firstAttribute="width" secondItem="deB-Sy-k39" secondAttribute="width" constant="-16" id="zSV-57-LoF"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="deB-Sy-k39" firstAttribute="top" secondItem="aAP-1y-eg0" secondAttribute="top" id="7nk-lE-YtV"/>
+                            <constraint firstItem="aAP-1y-eg0" firstAttribute="bottom" secondItem="deB-Sy-k39" secondAttribute="bottom" id="Qnb-jk-4j7"/>
+                            <constraint firstItem="aAP-1y-eg0" firstAttribute="trailing" secondItem="deB-Sy-k39" secondAttribute="trailing" id="cT9-UC-0Fm"/>
+                            <constraint firstItem="deB-Sy-k39" firstAttribute="leading" secondItem="aAP-1y-eg0" secondAttribute="leading" id="wdt-7U-8Bc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aAP-1y-eg0"/>
+                    </view>
+                    <size key="freeformSize" width="414" height="1000"/>
+                    <connections>
+                        <outlet property="articleImageView" destination="279-Cd-yu8" id="TSE-og-Fk8"/>
+                        <outlet property="contentLabel" destination="KwZ-0U-6Ge" id="4Xh-du-F6K"/>
+                        <outlet property="titleLabel" destination="b1H-h1-BaA" id="6ay-Uo-COd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oRH-ac-urd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1810" y="153"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1rN-Li-1NY">
+            <objects>
+                <viewController id="IHQ-Dc-wF5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tbl-YF-Gkk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZtD-Ne-Fv2">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuH-bj-yEO">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1116"/>
+                                        <mutableString key="text">unucu çökme uyarıcısı Uptime Robot da sunduğu API ile web sitelerine ve mobil uygulamalara entegre olan bir girişim. Umut Muhaddisoğlu tarafından kurulan Uptime Robot'un sunduğu kullanımı kolay API'ye uptimerobot.com/api sayfasından erişebilirsiniz.unucu çökme uyarıcısı Uptime Robot da sunduğu API ile web sitelerine ve mobil uygulamalara entegre olan bir girişim. Umut Muhaddisoğlu tarafından kurulan Uptime Robot'un sunduğu kullanımı kolay API'ye uptimerobot.com/api sayfasından erişebilirsiniz.unucu çökme uyarıcısı Uptime Robot da sunduğu API ile web sitelerine ve mobil uygulamalara entegre olan bir girişim. Umut Muhaddisoğlu tarafından kurulan Uptime Robot'un sunduğu kullanımı kolay API'ye uptimerobot.com/api sayfasından erişebilirsiniz.unucu çökme uyarıcısı Uptime Robot da sunduğu API ile web sitelerine ve mobil uygulamalara entegre olan bir girişim. Umut Muhaddisoğlu tarafından kurulan Uptime Robot'un sunduğu kullanımı kolay API'ye uptimerobot.com/api sayfasından erişebilirsiniz.unucu çökme uyarıcısı Uptime Robot da sunduğu API ile web sitelerine ve mobil uygulamalara entegre olan bir girişim. Umut Muhaddisoğlu tarafından kurulan Uptime Robot'un sunduğu kullanımı kolay API'ye uptimerobot.com/api sayfasından erişebilirsiniz.unucu çökme uyarıcısı Uptime Robot da sunduğu API ile web sitelerine ve mobil uygulamalara entegre olan bir girişim. Umut Muhaddisoğlu tarafından kurulan Uptime Robot'un sunduğu kullanımı kolay API'ye uptimerobot.com/api sayfasından erişebilirsiniz.unucu çökme uyarıcısı Uptime Robot da sunduğu API ile web sitelerine ve mobil uygulamalara entegre olan bir girişim. Umut Muhaddisoğlu tarafından kurulan Uptime Robot'un sunduğu kullanımı kolay API'ye uptimerobot.com/api sayfasından erişebilirsiniz.unucu çökme uyarıcısı Uptime Robot da sunduğu API ile web sitelerine ve mobil uygulamalara entegre olan bir girişim. Umut Muhaddisoğlu tarafından kurulan Uptime Robot'un sunduğu kullanımı kolay API'ye uptimerobot.com/api sayfasından erişebilirsiniz.unucu çökme uyarıcısı Uptime Robot da sunduğu API ile web sitelerine ve mobil uygulamalara entegre olan bir girişim. Umut Muhaddisoğlu tarafından kurulan Uptime Robot'un sunduğu kullanımı kolay API'ye uptimerobot.com/api sayfasından erişebilirsiniz.unucu çökme uyarıcısı Uptime Robot da sunduğu API ile web sitelerine ve mobil uygulamalara entegre olan bir girişim. Umut Muhaddisoğlu tarafından kurulan Uptime Robot'un sunduğu kullanımı kolay API'ye uptimerobot.com/api sayfasından erişebilirsiniz.unucu çökme uyarıcısı Uptime Robot da sunduğu API ile web sitelerine ve mobil uygulamalara entegre olan bir girişim. Umut Muhaddisoğlu tarafından kurulan Uptime Robot'un sunduğu kullanımı kolay API'ye uptimerobot.com/api sayfasından erişebilirsiniz.</mutableString>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="AuH-bj-yEO" firstAttribute="width" secondItem="ZtD-Ne-Fv2" secondAttribute="width" id="3Fs-ZG-Myp"/>
+                                    <constraint firstAttribute="trailing" secondItem="AuH-bj-yEO" secondAttribute="trailing" id="NES-bf-loF"/>
+                                    <constraint firstItem="AuH-bj-yEO" firstAttribute="leading" secondItem="ZtD-Ne-Fv2" secondAttribute="leading" id="g5q-Ox-XUo"/>
+                                    <constraint firstItem="AuH-bj-yEO" firstAttribute="top" secondItem="ZtD-Ne-Fv2" secondAttribute="top" id="gp9-FV-3Xe"/>
+                                    <constraint firstAttribute="bottom" secondItem="AuH-bj-yEO" secondAttribute="bottom" id="yaa-Nj-wa6"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KAV-TZ-hKx" firstAttribute="trailing" secondItem="ZtD-Ne-Fv2" secondAttribute="trailing" id="dDe-av-STp"/>
+                            <constraint firstItem="ZtD-Ne-Fv2" firstAttribute="top" secondItem="KAV-TZ-hKx" secondAttribute="top" id="ndC-od-tM1"/>
+                            <constraint firstItem="ZtD-Ne-Fv2" firstAttribute="leading" secondItem="KAV-TZ-hKx" secondAttribute="leading" id="tlD-6z-jWO"/>
+                            <constraint firstItem="KAV-TZ-hKx" firstAttribute="bottom" secondItem="ZtD-Ne-Fv2" secondAttribute="bottom" id="wCR-Yb-e1D"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KAV-TZ-hKx"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GWZ-Jy-Auv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-361" y="-334"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KF8-Ol-EHh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jdJ-ZI-RIR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" largeTitles="YES" id="Hyn-yl-7TW">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="5wn-zi-Vmv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7f8-Ed-QIi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="267" y="119"/>
         </scene>
     </scenes>
 </document>

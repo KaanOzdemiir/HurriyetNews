@@ -11,7 +11,6 @@
 		F7084152231711890052279E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7084151231711890052279E /* AppDelegate.swift */; };
 		F7084154231711890052279E /* ArticleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7084153231711890052279E /* ArticleListViewController.swift */; };
 		F7084157231711890052279E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7084155231711890052279E /* Main.storyboard */; };
-		F70841592317118A0052279E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F70841582317118A0052279E /* Assets.xcassets */; };
 		F708415C2317118A0052279E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F708415A2317118A0052279E /* LaunchScreen.storyboard */; };
 		F708416A231711F70052279E /* AlamofireService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7084169231711F70052279E /* AlamofireService.swift */; };
 		F708416C2317123D0052279E /* URLPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F708416B2317123D0052279E /* URLPath.swift */; };
@@ -20,6 +19,9 @@
 		F70841732317180B0052279E /* ArticleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70841722317180B0052279E /* ArticleRepository.swift */; };
 		F7C2CAD223181AF10020E4C2 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C2CAD023181AF10020E4C2 /* NewsTableViewCell.swift */; };
 		F7C2CAD323181AF10020E4C2 /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7C2CAD123181AF10020E4C2 /* NewsTableViewCell.xib */; };
+		F7C2CAD72319AC040020E4C2 /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C2CAD62319AC040020E4C2 /* ArticleDetailViewController.swift */; };
+		F7C2CAD9231A80400020E4C2 /* ArticleDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C2CAD8231A80400020E4C2 /* ArticleDetailViewModel.swift */; };
+		F7C2CADB231A838F0020E4C2 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C2CADA231A838F0020E4C2 /* Extentions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +32,6 @@
 		F7084151231711890052279E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7084153231711890052279E /* ArticleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListViewController.swift; sourceTree = "<group>"; };
 		F7084156231711890052279E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F70841582317118A0052279E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F708415B2317118A0052279E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F708415D2317118A0052279E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7084169231711F70052279E /* AlamofireService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireService.swift; sourceTree = "<group>"; };
@@ -40,6 +41,9 @@
 		F70841722317180B0052279E /* ArticleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRepository.swift; sourceTree = "<group>"; };
 		F7C2CAD023181AF10020E4C2 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		F7C2CAD123181AF10020E4C2 /* NewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
+		F7C2CAD62319AC040020E4C2 /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
+		F7C2CAD8231A80400020E4C2 /* ArticleDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewModel.swift; sourceTree = "<group>"; };
+		F7C2CADA231A838F0020E4C2 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				F7084151231711890052279E /* AppDelegate.swift */,
-				F70841582317118A0052279E /* Assets.xcassets */,
 				F708415A2317118A0052279E /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
@@ -135,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				F708416D231714FE0052279E /* ArticleViewModel.swift */,
+				F7C2CAD8231A80400020E4C2 /* ArticleDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -143,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				F7084153231711890052279E /* ArticleListViewController.swift */,
+				F7C2CAD62319AC040020E4C2 /* ArticleDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -152,6 +157,7 @@
 			children = (
 				F7084169231711F70052279E /* AlamofireService.swift */,
 				F708416B2317123D0052279E /* URLPath.swift */,
+				F7C2CADA231A838F0020E4C2 /* Extentions.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -234,7 +240,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F708415C2317118A0052279E /* LaunchScreen.storyboard in Resources */,
-				F70841592317118A0052279E /* Assets.xcassets in Resources */,
 				F7C2CAD323181AF10020E4C2 /* NewsTableViewCell.xib in Resources */,
 				F7084157231711890052279E /* Main.storyboard in Resources */,
 			);
@@ -292,11 +297,14 @@
 				F708416C2317123D0052279E /* URLPath.swift in Sources */,
 				F70841732317180B0052279E /* ArticleRepository.swift in Sources */,
 				F7C2CAD223181AF10020E4C2 /* NewsTableViewCell.swift in Sources */,
+				F7C2CADB231A838F0020E4C2 /* Extentions.swift in Sources */,
 				F7084154231711890052279E /* ArticleListViewController.swift in Sources */,
 				F708416A231711F70052279E /* AlamofireService.swift in Sources */,
 				F708416E231714FE0052279E /* ArticleViewModel.swift in Sources */,
 				F7084152231711890052279E /* AppDelegate.swift in Sources */,
 				F70841702317158F0052279E /* ArticleResponse.swift in Sources */,
+				F7C2CAD9231A80400020E4C2 /* ArticleDetailViewModel.swift in Sources */,
+				F7C2CAD72319AC040020E4C2 /* ArticleDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

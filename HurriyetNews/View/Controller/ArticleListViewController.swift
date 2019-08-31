@@ -46,7 +46,11 @@ class ArticleListViewController: UIViewController {
         tableView.dataSource = self
     }
 
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SegueArticleDetailVC", let destination = segue.destination as? ArticleDetailViewController, let article = sender as? ArticleResponse {
+            destination.viewModel.fetchArticleBy(id: article.id ?? "0")
+        }
+    }
 }
 
 extension ArticleListViewController: UITableViewDataSource, UITableViewDelegate {
@@ -68,6 +72,7 @@ extension ArticleListViewController: UITableViewDataSource, UITableViewDelegate 
         let article = viewModel.articles.value[indexPath.row]
         
         
+        performSegue(withIdentifier: "SegueArticleDetailVC", sender: article)
     }
     
 }
