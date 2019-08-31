@@ -12,12 +12,10 @@ import Kingfisher
 
 class NewsTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var newsImageView: UIImageView!
     @IBOutlet weak var shimmerView: FBShimmeringView!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var firstTag: UILabel!
     @IBOutlet weak var secondTag: UILabel!
     @IBOutlet weak var thirdTag: UILabel!
@@ -40,7 +38,6 @@ class NewsTableViewCell: UITableViewCell {
     func setWith(article: ArticleResponse) {
         spinner.startAnimating()
         titleLabel.text = article.title
-        durationLabel.text = "3 Dk"
         
         firstTag.text = article.tags?[0].capitalized
         secondTag.text = article.tags?[1].capitalized

@@ -14,14 +14,19 @@ class ArticleDetailViewController: UIViewController {
     @IBOutlet weak var articleImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
+    @IBOutlet weak var durationLabel: UILabel!
     
     let viewModel = ArticleDetailViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        subscribeArticleResponse()
+        
+    }
+    
+    func subscribeArticleResponse() {
         viewModel.articleResponse.subscribe(onNext: { (articleResponse) in
-            
             
             if let urlString = articleResponse.files?.first?.fileUrl, let url = URL(string: urlString), let id = articleResponse.id {
                 let resource = ImageResource(downloadURL: url, cacheKey: id)
@@ -31,12 +36,18 @@ class ArticleDetailViewController: UIViewController {
             self.titleLabel.text = articleResponse.title
             self.contentLabel.text = articleResponse.text?.convertHtml().string
             
-
+            let content = articleResponse.text?.convertHtml().string
+            self.contentLabel.text = content
+            
+            let components = content?.components(separatedBy: .whitespacesAndNewlines)
+            let words = components?.filter { !$0.isEmpty }
+            
+            self.durationLabel.text = words!.count.minute
+            
         }, onError: { (error) in
             
             
         })
-        .disposed(by: viewModel.disposeBag)
-        
+            .disposed(by: viewModel.disposeBag)
     }
 }

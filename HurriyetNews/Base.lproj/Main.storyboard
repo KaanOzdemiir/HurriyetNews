@@ -94,14 +94,40 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JlD-5h-Mjm">
+                                        <rect key="frame" x="357.5" y="16" width="40.5" height="22.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVb-81-Y8q">
+                                                <rect key="frame" x="4" y="4" width="32.5" height="14.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.92941176469999998" green="0.2666666667" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="KVb-81-Y8q" secondAttribute="bottom" constant="4" id="Mnf-RL-ybd"/>
+                                            <constraint firstAttribute="trailing" secondItem="KVb-81-Y8q" secondAttribute="trailing" constant="4" id="fnp-Qh-z8F"/>
+                                            <constraint firstItem="KVb-81-Y8q" firstAttribute="top" secondItem="JlD-5h-Mjm" secondAttribute="top" constant="4" id="kvc-kF-A7H"/>
+                                            <constraint firstItem="KVb-81-Y8q" firstAttribute="leading" secondItem="JlD-5h-Mjm" secondAttribute="leading" constant="4" id="udy-gI-OYE"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="b1H-h1-BaA" firstAttribute="top" secondItem="279-Cd-yu8" secondAttribute="bottom" constant="8" id="C1a-LK-Fjd"/>
+                                    <constraint firstItem="JlD-5h-Mjm" firstAttribute="top" secondItem="deB-Sy-k39" secondAttribute="top" constant="16" id="DbW-9b-7gM"/>
                                     <constraint firstItem="279-Cd-yu8" firstAttribute="leading" secondItem="deB-Sy-k39" secondAttribute="leading" constant="8" id="ERO-DS-vu9"/>
                                     <constraint firstItem="279-Cd-yu8" firstAttribute="top" secondItem="deB-Sy-k39" secondAttribute="top" constant="8" id="KAw-sZ-8wB"/>
                                     <constraint firstItem="KwZ-0U-6Ge" firstAttribute="top" secondItem="b1H-h1-BaA" secondAttribute="bottom" constant="8" id="Pgn-Cp-Okf"/>
                                     <constraint firstAttribute="trailing" secondItem="279-Cd-yu8" secondAttribute="trailing" constant="8" id="cen-hP-eg0"/>
                                     <constraint firstItem="KwZ-0U-6Ge" firstAttribute="leading" secondItem="deB-Sy-k39" secondAttribute="leading" constant="8" id="jfK-qH-v4A"/>
+                                    <constraint firstAttribute="trailing" secondItem="JlD-5h-Mjm" secondAttribute="trailing" constant="16" id="l9j-Cw-VRo"/>
                                     <constraint firstAttribute="trailing" secondItem="KwZ-0U-6Ge" secondAttribute="trailing" constant="8" id="mh6-Xs-mRl"/>
                                     <constraint firstAttribute="bottom" secondItem="KwZ-0U-6Ge" secondAttribute="bottom" constant="8" id="vgK-TK-fPX"/>
                                     <constraint firstItem="KwZ-0U-6Ge" firstAttribute="width" secondItem="deB-Sy-k39" secondAttribute="width" constant="-16" id="xqu-hY-fEA"/>
@@ -124,54 +150,13 @@
                     <connections>
                         <outlet property="articleImageView" destination="279-Cd-yu8" id="TSE-og-Fk8"/>
                         <outlet property="contentLabel" destination="KwZ-0U-6Ge" id="4Xh-du-F6K"/>
+                        <outlet property="durationLabel" destination="KVb-81-Y8q" id="Oxn-0A-3dH"/>
                         <outlet property="titleLabel" destination="b1H-h1-BaA" id="6ay-Uo-COd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oRH-ac-urd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1810" y="153"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="1rN-Li-1NY">
-            <objects>
-                <viewController id="IHQ-Dc-wF5" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Tbl-YF-Gkk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZtD-Ne-Fv2">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuH-bj-yEO">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1116"/>
-                                        <mutableString key="text">unucu çökme uyarıcısı Uptime Robot da sunduğu API ile web sitelerine ve mobil uygulamalara entegre olan bir girişim. Umut Muhaddisoğlu tarafından kurulan Uptime Robot'un sunduğu kullanımı kolay API'ye uptimerobot.com/api sayfasından erişebilirsiniz.unucu çökme uyarıcısı Uptime Robot da sunduğu API ile web sitelerine ve mobil uygulamalara entegre olan bir girişim. Umut Muhaddisoğlu tarafından kurulan Uptime Robot'un sunduğu kullanımı kolay API'ye uptimerobot.com/api sayfasından erişebilirsiniz.unucu çökme uyarıcısı Uptime Robot da sunduğu API ile web sitelerine ve mobil uygulamalara entegre olan bir girişim. Umut Muhaddisoğlu tarafından kurulan Uptime Robot'un sunduğu kullanımı kolay API'ye uptimerobot.com/api sayfasından erişebilirsiniz.unucu çökme uyarıcısı Uptime Robot da sunduğu API ile web sitelerine ve mobil uygulamalara entegre olan bir girişim. Umut Muhaddisoğlu tarafından kurulan Uptime Robot'un sunduğu kullanımı kolay API'ye uptimerobot.com/api sayfasından erişebilirsiniz.unucu çökme uyarıcısı Uptime Robot da sunduğu API ile web sitelerine ve mobil uygulamalara entegre olan bir girişim. Umut Muhaddisoğlu tarafından kurulan Uptime Robot'un sunduğu kullanımı kolay API'ye uptimerobot.com/api sayfasından erişebilirsiniz.unucu çökme uyarıcısı Uptime Robot da sunduğu API ile web sitelerine ve mobil uygulamalara entegre olan bir girişim. Umut Muhaddisoğlu tarafından kurulan Uptime Robot'un sunduğu kullanımı kolay API'ye uptimerobot.com/api sayfasından erişebilirsiniz.unucu çökme uyarıcısı Uptime Robot da sunduğu API ile web sitelerine ve mobil uygulamalara entegre olan bir girişim. Umut Muhaddisoğlu tarafından kurulan Uptime Robot'un sunduğu kullanımı kolay API'ye uptimerobot.com/api sayfasından erişebilirsiniz.unucu çökme uyarıcısı Uptime Robot da sunduğu API ile web sitelerine ve mobil uygulamalara entegre olan bir girişim. Umut Muhaddisoğlu tarafından kurulan Uptime Robot'un sunduğu kullanımı kolay API'ye uptimerobot.com/api sayfasından erişebilirsiniz.unucu çökme uyarıcısı Uptime Robot da sunduğu API ile web sitelerine ve mobil uygulamalara entegre olan bir girişim. Umut Muhaddisoğlu tarafından kurulan Uptime Robot'un sunduğu kullanımı kolay API'ye uptimerobot.com/api sayfasından erişebilirsiniz.unucu çökme uyarıcısı Uptime Robot da sunduğu API ile web sitelerine ve mobil uygulamalara entegre olan bir girişim. Umut Muhaddisoğlu tarafından kurulan Uptime Robot'un sunduğu kullanımı kolay API'ye uptimerobot.com/api sayfasından erişebilirsiniz.unucu çökme uyarıcısı Uptime Robot da sunduğu API ile web sitelerine ve mobil uygulamalara entegre olan bir girişim. Umut Muhaddisoğlu tarafından kurulan Uptime Robot'un sunduğu kullanımı kolay API'ye uptimerobot.com/api sayfasından erişebilirsiniz.</mutableString>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="AuH-bj-yEO" firstAttribute="width" secondItem="ZtD-Ne-Fv2" secondAttribute="width" id="3Fs-ZG-Myp"/>
-                                    <constraint firstAttribute="trailing" secondItem="AuH-bj-yEO" secondAttribute="trailing" id="NES-bf-loF"/>
-                                    <constraint firstItem="AuH-bj-yEO" firstAttribute="leading" secondItem="ZtD-Ne-Fv2" secondAttribute="leading" id="g5q-Ox-XUo"/>
-                                    <constraint firstItem="AuH-bj-yEO" firstAttribute="top" secondItem="ZtD-Ne-Fv2" secondAttribute="top" id="gp9-FV-3Xe"/>
-                                    <constraint firstAttribute="bottom" secondItem="AuH-bj-yEO" secondAttribute="bottom" id="yaa-Nj-wa6"/>
-                                </constraints>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="KAV-TZ-hKx" firstAttribute="trailing" secondItem="ZtD-Ne-Fv2" secondAttribute="trailing" id="dDe-av-STp"/>
-                            <constraint firstItem="ZtD-Ne-Fv2" firstAttribute="top" secondItem="KAV-TZ-hKx" secondAttribute="top" id="ndC-od-tM1"/>
-                            <constraint firstItem="ZtD-Ne-Fv2" firstAttribute="leading" secondItem="KAV-TZ-hKx" secondAttribute="leading" id="tlD-6z-jWO"/>
-                            <constraint firstItem="KAV-TZ-hKx" firstAttribute="bottom" secondItem="ZtD-Ne-Fv2" secondAttribute="bottom" id="wCR-Yb-e1D"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="KAV-TZ-hKx"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GWZ-Jy-Auv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-361" y="-334"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KF8-Ol-EHh">

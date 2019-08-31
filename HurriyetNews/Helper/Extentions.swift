@@ -31,3 +31,14 @@ extension String {
     }
 }
 
+extension Int {
+    var minute: String {
+        
+        let min = Int((Double(self) / 220.0).rounded())
+        if min < 1 {
+            return "1 Dk'dan az"
+        }
+        return "\(min) Dk"
+        
+    }
+}

@@ -65,31 +65,6 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                     </activityIndicatorView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9WQ-su-KVy">
-                                        <rect key="frame" x="237" y="8" width="59" height="23"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zmd-gk-gJ7">
-                                                <rect key="frame" x="4" y="4" width="51" height="15"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="Zmd-gk-gJ7" secondAttribute="trailing" constant="4" id="Oqc-dm-CG3"/>
-                                            <constraint firstItem="Zmd-gk-gJ7" firstAttribute="leading" secondItem="9WQ-su-KVy" secondAttribute="leading" constant="4" id="Tfp-NO-Avp"/>
-                                            <constraint firstAttribute="bottom" secondItem="Zmd-gk-gJ7" secondAttribute="bottom" constant="4" id="dV1-zl-AKR"/>
-                                            <constraint firstItem="Zmd-gk-gJ7" firstAttribute="top" secondItem="9WQ-su-KVy" secondAttribute="top" constant="4" id="zgf-CU-sVn"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dVH-nA-7FC">
                                         <rect key="frame" x="0.0" y="248" width="104.5" height="31"/>
                                         <subviews>
@@ -210,13 +185,11 @@
                                 <constraints>
                                     <constraint firstItem="fyB-U5-L2F" firstAttribute="bottom" secondItem="xrT-cd-Xzd" secondAttribute="bottom" id="4Vz-NA-jNe"/>
                                     <constraint firstAttribute="trailing" secondItem="fyB-U5-L2F" secondAttribute="trailing" id="652-Gv-QoA"/>
-                                    <constraint firstItem="9WQ-su-KVy" firstAttribute="top" secondItem="w1S-Nc-LwS" secondAttribute="top" constant="8" id="65R-Y7-D6H"/>
                                     <constraint firstItem="fyB-U5-L2F" firstAttribute="leading" secondItem="w1S-Nc-LwS" secondAttribute="leading" id="Azc-Zn-WsH"/>
                                     <constraint firstItem="ukA-yM-aoq" firstAttribute="leading" secondItem="w1S-Nc-LwS" secondAttribute="leading" id="B9Y-3l-ZAk"/>
                                     <constraint firstItem="MzF-bp-20z" firstAttribute="top" secondItem="w1S-Nc-LwS" secondAttribute="top" constant="8" id="Gc7-SV-N7U"/>
                                     <constraint firstItem="dVH-nA-7FC" firstAttribute="leading" secondItem="w1S-Nc-LwS" secondAttribute="leading" id="IqR-QE-N5S"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dVH-nA-7FC" secondAttribute="trailing" constant="8" id="PL5-9V-viT"/>
-                                    <constraint firstAttribute="trailing" secondItem="9WQ-su-KVy" secondAttribute="trailing" constant="8" id="Scn-8J-8pO"/>
                                     <constraint firstItem="MzF-bp-20z" firstAttribute="leading" secondItem="w1S-Nc-LwS" secondAttribute="leading" constant="8" id="UT2-xg-KAo"/>
                                     <constraint firstAttribute="trailing" secondItem="ukA-yM-aoq" secondAttribute="trailing" id="Vyl-9z-w7k"/>
                                     <constraint firstItem="fyB-U5-L2F" firstAttribute="top" secondItem="w1S-Nc-LwS" secondAttribute="top" id="Zs8-cQ-wQa"/>
@@ -249,7 +222,6 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="dayLabel" destination="eo6-rc-O49" id="Gnh-B5-dBU"/>
-                <outlet property="durationLabel" destination="Zmd-gk-gJ7" id="pi6-AB-ifm"/>
                 <outlet property="firstTag" destination="S9b-XS-HYx" id="35O-sk-4pR"/>
                 <outlet property="newsImageView" destination="fyB-U5-L2F" id="Qtg-vg-pzM"/>
                 <outlet property="secondTag" destination="V2s-gY-k6w" id="6uV-k9-4ax"/>
