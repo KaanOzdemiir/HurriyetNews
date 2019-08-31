@@ -10,4 +10,5 @@ import Foundation
 
 class URLPath {
     static let articleGet = "/v1/articles"
+    static let writersGet = "/v1/writers"
 }

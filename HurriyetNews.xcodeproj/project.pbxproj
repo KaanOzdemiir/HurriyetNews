@@ -17,6 +17,8 @@
 		F708416E231714FE0052279E /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F708416D231714FE0052279E /* ArticleViewModel.swift */; };
 		F70841702317158F0052279E /* ArticleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F708416F2317158F0052279E /* ArticleResponse.swift */; };
 		F70841732317180B0052279E /* ArticleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70841722317180B0052279E /* ArticleRepository.swift */; };
+		F7A19B08231B1E5F0026F010 /* LoadingNews.json in Resources */ = {isa = PBXBuildFile; fileRef = F7A19B07231B1E5F0026F010 /* LoadingNews.json */; };
+		F7A19B0A231B255E0026F010 /* WriterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A19B09231B255E0026F010 /* WriterRepository.swift */; };
 		F7C2CAD223181AF10020E4C2 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C2CAD023181AF10020E4C2 /* NewsTableViewCell.swift */; };
 		F7C2CAD323181AF10020E4C2 /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7C2CAD123181AF10020E4C2 /* NewsTableViewCell.xib */; };
 		F7C2CAD72319AC040020E4C2 /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C2CAD62319AC040020E4C2 /* ArticleDetailViewController.swift */; };
@@ -39,6 +41,8 @@
 		F708416D231714FE0052279E /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
 		F708416F2317158F0052279E /* ArticleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleResponse.swift; sourceTree = "<group>"; };
 		F70841722317180B0052279E /* ArticleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRepository.swift; sourceTree = "<group>"; };
+		F7A19B07231B1E5F0026F010 /* LoadingNews.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LoadingNews.json; sourceTree = "<group>"; };
+		F7A19B09231B255E0026F010 /* WriterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriterRepository.swift; sourceTree = "<group>"; };
 		F7C2CAD023181AF10020E4C2 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		F7C2CAD123181AF10020E4C2 /* NewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
 		F7C2CAD62319AC040020E4C2 /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +100,7 @@
 		F7084150231711890052279E /* HurriyetNews */ = {
 			isa = PBXGroup;
 			children = (
+				F7A19B06231B1E4D0026F010 /* Lottie Animations */,
 				F7084171231717FD0052279E /* Repository */,
 				F7084168231711E50052279E /* Helper */,
 				F7084166231711BE0052279E /* ViewModel */,
@@ -166,8 +171,17 @@
 			isa = PBXGroup;
 			children = (
 				F70841722317180B0052279E /* ArticleRepository.swift */,
+				F7A19B09231B255E0026F010 /* WriterRepository.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		F7A19B06231B1E4D0026F010 /* Lottie Animations */ = {
+			isa = PBXGroup;
+			children = (
+				F7A19B07231B1E5F0026F010 /* LoadingNews.json */,
+			);
+			path = "Lottie Animations";
 			sourceTree = "<group>";
 		};
 		F7C2CACF23181ADD0020E4C2 /* Cells */ = {
@@ -241,6 +255,7 @@
 			files = (
 				F708415C2317118A0052279E /* LaunchScreen.storyboard in Resources */,
 				F7C2CAD323181AF10020E4C2 /* NewsTableViewCell.xib in Resources */,
+				F7A19B08231B1E5F0026F010 /* LoadingNews.json in Resources */,
 				F7084157231711890052279E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +319,7 @@
 				F7084152231711890052279E /* AppDelegate.swift in Sources */,
 				F70841702317158F0052279E /* ArticleResponse.swift in Sources */,
 				F7C2CAD9231A80400020E4C2 /* ArticleDetailViewModel.swift in Sources */,
+				F7A19B0A231B255E0026F010 /* WriterRepository.swift in Sources */,
 				F7C2CAD72319AC040020E4C2 /* ArticleDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

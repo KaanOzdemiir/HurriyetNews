@@ -12,6 +12,7 @@ import Shimmer
 class ArticleListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     let viewModel = ArticleViewModel()
 
     let cellIdentifier = "NewsCellIdentifier"
@@ -23,9 +24,7 @@ class ArticleListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-
-        
+                
         viewModel.articleResponse.subscribe(onError: { (error) in
             let alertController = UIAlertController(title: "Oups!", message: error.localizedDescription, preferredStyle: .actionSheet)
             alertController.addAction(UIAlertAction(title: "OK", style: .default))
@@ -35,6 +34,7 @@ class ArticleListViewController: UIViewController {
         
         
         viewModel.articles.subscribe(onNext: { (articles) in
+            self.spinner.stopAnimating()
             self.tableView.reloadData()
         })
         .disposed(by: viewModel.disposeBag)
@@ -44,6 +44,7 @@ class ArticleListViewController: UIViewController {
         tableView.register(UINib(nibName: "NewsTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
         tableView.delegate = self
         tableView.dataSource = self
+        
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

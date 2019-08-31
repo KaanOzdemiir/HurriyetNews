@@ -16,5 +16,6 @@ pod 'Alamofire'
   	pod 'RxCocoa'
 	pod 'Shimmer'
   	pod 'Kingfisher', '~> 5.0'
+	pod 'lottie-ios'
 
 end

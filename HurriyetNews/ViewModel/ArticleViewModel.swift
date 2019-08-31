@@ -18,7 +18,6 @@ class ArticleViewModel {
     
     let articles = BehaviorRelay<[ArticleResponse]>(value: [])
     
-    
     let articleRepository = ArticleRepository()
     
     func fetchArticles(params: [String: AnyObject]) {

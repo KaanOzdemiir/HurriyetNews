@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+import Lottie
 
 class ArticleDetailViewController: UIViewController {
     
@@ -15,6 +16,7 @@ class ArticleDetailViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var durationLabel: UILabel!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     let viewModel = ArticleDetailViewModel()
     
@@ -22,12 +24,12 @@ class ArticleDetailViewController: UIViewController {
         super.viewDidLoad()
         
         subscribeArticleResponse()
-        
     }
     
     func subscribeArticleResponse() {
         viewModel.articleResponse.subscribe(onNext: { (articleResponse) in
-            
+
+            self.spinner.stopAnimating()
             if let urlString = articleResponse.files?.first?.fileUrl, let url = URL(string: urlString), let id = articleResponse.id {
                 let resource = ImageResource(downloadURL: url, cacheKey: id)
                 self.articleImageView.kf.setImage(with: resource)

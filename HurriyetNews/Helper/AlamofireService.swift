@@ -79,4 +79,34 @@ class AlamofireService {
                 }
         }
     }
+    
+    static func getWriters(completion: @escaping (DataResponse<[ArticleResponse]>) -> ()) {
+        
+        var urlComponents = URLComponents()
+        urlComponents.host = host
+        urlComponents.path = URLPath.writersGet
+        urlComponents.scheme = "https"
+        
+        print("\n\(urlComponents.string!) istek atılıyor...")
+        Alamofire.request(urlComponents.string!, method: .get, encoding: URLEncoding.default, headers: defaultHeaderParams).responseArray { (response: DataResponse<[ArticleResponse]>) in
+            
+            print(response.result.value)
+            completion(response)
+            }
+            .responseJSON { response in
+                print("JSON:\(response.result.value)")
+                switch(response.result) {
+                case .success(_):
+                    if let data = response.result.value{
+                        print(data)
+                    }
+                    
+                case .failure(_):
+                    
+                    print("Error message:\(response.result.error)")
+                    break
+                    
+                }
+        }
+    }
 }
